@@ -1,0 +1,54 @@
+#######################################################################
+#######################################################################
+__bash__
+
+cd 					# move between folders
+ls 					# existing directories
+mkdir 					# create directory
+mv source_dir/!(file5) target_dir/ 	# move except one file from one directory to other
+rm *.out 			   	# everything finishing with 'out'
+rm -R ['folder_name'] 	 	   	# remove everything with folder content
+cp file1 file2 			   	# copy file 1 to file2
+cp output.txt ~/bigdata/bigdata/lab1-spark/output_ex1.txt
+cp demo.py ~/bigdata/bigdata/lab1-spark/ex1.py
+cat ./pa* > output_ex2.txt
+
+#######################################################################
+#######################################################################
+
+__git__
+
+git clone  			# https address from gitlab
+git add * 			# stage all files
+git status			# check if you have staged for commit
+git commit -am 'Write message'	# commit with small message
+git push			# to push changes to the gitlab repository
+git reset --soft HEAD~1		# retrieve a commit to uncommit (staged state)
+git restore --staged *		# bring staged files to unstaged status
+git branch <name>		# create a branch
+git branch			# will show the branches that are available in the local repository
+git branch -a			# to view even the remote branches
+git checkout <name>		# switch to a created branch  from main
+git clone -b <name> <adress>	# specify and clone only the required branch from the repository
+git switch -f <branchname>	# if you made all your commits on wrong branch, switch to yours without any changes
+
+
+# if you have push error, check the status of online repository and local,
+# always commit to save files, pull from online repo, then,
+# create folder for other files not to mix everything (to make it clean)
+
+#######################################################################
+#######################################################################
+
+__conda__
+
+conda install package=5.1.5				# to install package of specific version
+conda create --name myenv --no-default-packages		# to create environment called <myenv> without any default packages
+conda activate myenv					# activate <myenv> environment 	
+conda deactivate					# deactivate <myenv> environment 
+conda config --append channels conda-forge		# add conda forga channel to find more packages for installation
+!conda info						# check your current environment in conda
+conda env remove -n myenv				# removing conda environment
+
+
+
